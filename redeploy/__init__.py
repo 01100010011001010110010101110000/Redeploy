@@ -23,12 +23,6 @@ class Redeployer():
         self.namespace = namespace
         self.api_instance = kubernetes.client.AppsV1Api()
 
-    def construct_patch_body(self):
-        return {
-
-        }
-
-
     def redeploy(self):
         try:
             deployment = self.api_instance.read_namespaced_deployment(self.deployment, self.namespace)
